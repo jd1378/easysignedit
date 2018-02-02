@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        maven {
+            name = 'forge'
+            url = 'https://files.minecraftforge.net/maven'
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+
+plugins {
+    id 'org.spongepowered.plugin' version '0.8.1'
+    id 'net.minecrell.vanillagradle.server' version '2.2-6'
+}
+
+minecraft {
+    version = '1.12.2'
+    mappings = 'snapshot_20180122'
+}
+
+group 'com.javadmnjd.easysignedit'
+version '1.0-SNAPSHOT'
+description = 'a simple and easy sign editor plugin'
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:7.1.0-SNAPSHOT'
+    compile 'com.github.CrushedPixel:PacketGate:0.1.1'
+}
